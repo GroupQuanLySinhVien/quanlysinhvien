@@ -16,7 +16,4 @@ Route::get('/', function () {
 });
 Route::get('dangnhap','adminController@getlogin');
 Route::post('dangnhap','adminController@postlogin');
-Route::get('thongtin','adminController@getthongtin');
-Route::get('index',function(){
-	return view('layout.index');
-});
+Route::get('dangxuat','adminController@getdangxuat');

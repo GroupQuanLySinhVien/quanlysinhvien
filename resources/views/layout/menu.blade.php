@@ -1,16 +1,19 @@
+
  <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- Sidebar user panel -->
+      @if(Auth::check()) 
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="tim_asset/image/php108e.jpg" class="img-circle" alt="User Image">
+          <img src="tim_asset/image/{{Auth::user()->avata}}" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Group php108e</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+          <p>{{Auth::user()->fullname}}</p>
+          <a href="liststudent"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
+      @endif
       <!-- search form -->
       <form action="#" method="get" class="sidebar-form">
         <div class="input-group">
@@ -103,7 +106,7 @@
  
 
         <li>
-          <a href="logout">
+          <a href="dangxuat">
             <i class="fa fa-sign-out"></i>
             <span>Đăng xuất</span>
           </a>

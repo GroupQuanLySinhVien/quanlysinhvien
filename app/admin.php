@@ -8,14 +8,6 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 
 class admin extends Model
 {
-	use Notifiable;
-
-     protected $fillable = [
-        'name', 'email', 'password',
-    ];
-
-     protected $hidden = [
-        'password', 'remember_token',
-    ];
+	protected $table="admin";
     
 }

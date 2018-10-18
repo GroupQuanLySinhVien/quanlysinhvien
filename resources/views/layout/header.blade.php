@@ -1,6 +1,6 @@
  <header class="main-header">
     <!-- Logo -->
-    <a href="/" class="logo">
+    <a href="liststudent" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>F</b>PT</span>
       <!-- logo for regular state and mobile devices -->
@@ -62,17 +62,18 @@
   
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
+             @if(Auth::check())
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="tim_asset/image/php108e.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Group php108e</span>
+              <span class="hidden-xs">{{Auth::user()->fullname}}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="tim_asset/image/php108e.jpg" class="img-circle" alt="User Image">
+                <img src="tim_asset/image/{{Auth::user()->avata}}" class="img-circle" alt="User Image">
 
                 <p>
-                        Group php108e
+                        {{Auth::user()->fullname}}
                   <small><?php
                   date_default_timezone_set('Asia/Ho_Chi_Minh');
                     $dt = new DateTime();
@@ -80,14 +81,15 @@
                       ?></small>
                 </p>
               </li>
+@endif
               <!-- Menu Body -->
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                <a href="#" class="btn btn-default btn-flat  fa fa-gears"> Setting</a>
+                <a href="#" class="btn btn-info btn-flat  fa fa-gears"> Setting</a>
                 </div>
                 <div class="pull-right">
-                  <a href="logout" class="btn btn-default btn-flat   fa fa-sign-out">Sign out</a>
+                  <a href="dangxuat" class="btn btn-warning btn-flat   fa fa-sign-out">Sign out</a>
                 </div>
               </li>
             </ul>

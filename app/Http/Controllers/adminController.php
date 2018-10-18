@@ -23,15 +23,16 @@ class adminController extends Controller
             'password.max'=>'Mật khẩu không được vượi quá 30 kí tự'
 
         ]);
-        if(Auth::guard('admin')->attempt(['email'=>$request->email,'password'=>$request->password],$request->remember_me)) {
-            return redirect('thongtin');
+        if(Auth::attempt(['email'=>$request->email,'password'=>$request->password],$request->remember_me)) {
+            return redirect('liststudent');
         }else{
-               return redirect('login')->withInput($request->only('email', 'remember_me'));
+               return redirect('dangnhap')->withInput($request->only('email', 'remember_me'));
         }
     
     }
-    public function getthongtin()
-    {
-    	return view('admin.thongtin');
+     public function getdangxuat(){
+        Auth::logout();
+        return redirect('dangnhap');
     }
+    
 }
