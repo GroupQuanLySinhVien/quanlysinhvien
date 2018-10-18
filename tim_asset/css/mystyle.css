@@ -1,0 +1,78 @@
+ .container .row h4{
+	color: #3a5;
+	text-transform: uppercase;
+	font-weight:bold;
+	padding-bottom: 10px;
+	font-size: 16pt;
+}
+
+.icon input[type=text]{
+	padding-left: 40px;
+	font-size: 16px;
+}
+
+.icon{
+	position: relative;
+}
+.icon i{
+	position: absolute;
+	left:0px;
+	bottom: 4px;
+	padding: 9px 8px;
+}
+
+.icon a{
+	position: absolute;
+	right:0px;
+	bottom: 4px;
+	padding: 9px 8px;
+}
+.icon-input {
+ 	height: 40px;
+}
+.icondate input[type=text]{
+	padding-left: 40px;
+	font-size: 16px;
+}
+
+.icondate{
+	position: relative;
+}
+.icondate i{
+	position: absolute;
+	left:0px;
+	bottom: 4px;
+	margin-left: 15px;
+	padding: 9px 8px;
+}
+.icondate a{
+	position: absolute;
+	right:0px;
+	bottom: 4px;
+	margin-right: 15px;
+	padding: 9px 8px;
+}
+.clearfix button{
+	height: 40px;
+}
+.from-to{
+	padding-top: 0px;
+	font-weight: bold;
+	font-size: 15pt;
+	margin-top: -10px;
+}
+.from-to i{
+	left: 10px;
+}
+.iconleft{
+	position: absolute;
+	left:0px;
+	top:-30px;
+	padding: 9px 8px;
+}
+.iconright{
+	position: absolute;
+	right:0px;
+	top:-30px;
+	padding: 9px 8px;
+}
