@@ -12,8 +12,8 @@
         <small>sinh viên</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="trip/list"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="owner/list"><?php echo $action1 ?></a></li>
+        <li><a href="list"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="liststudent"><?php echo $action1 ?></a></li>
         <li class="active">Danh sách</li>
         <li class="active"><?php echo $action2 ?></li>
       </ol>
@@ -37,9 +37,12 @@
           <div class="box">
             <div class="box-header">
               
-              <a href="studentadd"><button type="button" class="btn btn-success pull-right">Thêm sinh viên</button></a>
+              <a href="addstudent"><button type="button" class="btn btn-success pull-right">Thêm sinh viên</button></a>
             <!-- /.box-header -->
+              </div>
             <div class="box-body">
+             
+          
               <table class="table table-striped table-bordered table-hover" id="dataTables-example"> 
                 <thead>
                             <tr align="center">
@@ -60,14 +63,14 @@
                           @foreach($student as $item)
                             <tr class="odd gradeX" align="center">
                               <td>{{$count++}}</td>
-                              <td><img src="tim_asset/image/{{$item->avata}}" alt="{{$item->avata}}" style="max-height: 60px;"></td>  
+                              <td><img src="tim_asset/image/{{$item->avata}}" alt="{{$item->avata}}" style="max-height: 60px;max-width: 60px;"></td>  
                               <td>{{$item->masv}}</td>   
                                <td>{{$item->tensv}}</td>
                                 <td>{{$item->email}}</td>
                                 <td>{{$item->diachi}}</td>
                                 <td>{{$item->sdt}}</td>
                                 
-                                 <td class="center"><a style="font-weight: bold;" href="student/edit/{{$item->id}}"><button class="btn btn-warning">Sửa</button></a></td>
+                                 <td class="center"><a style="font-weight: bold;" href="editstudent/{{$item->id}}"><button class="btn btn-warning">Sửa</button></a></td>
                                 <td class="center"><button class="btn btn-danger" data-catid={{$item->id}} data-toggle="modal" data-target="#delete">Xóa</button></td>
                                
                             </tr>
@@ -77,6 +80,8 @@
                             
                         </tbody>
               </table>
+                    
+          
             </div>
             <!-- /.box-body -->
           </div>
@@ -97,13 +102,13 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title text-center" id="myModalLabel">Xác nhận xóa</h4>
       </div>
-      <form action="studentdelete" method="post">
+      <form action="deletesinhvien" method="post">
           {{csrf_field()}}
         <div class="modal-body">
         <p class="text-center">
           Bạn có chắc chắn muốn xóa?
         </p>
-            <input type="hidden" name="owner" id="cat_id" value="">
+            <input type="hidden" name="id" id="cat_id" value="">
 
         </div>
         <div class="modal-footer">
@@ -116,4 +121,3 @@
 </div>
 
   @endsection
-  @section('s

@@ -13,18 +13,18 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="admin_config/bower_components/font-awesome/css/font-awesome.min.css">
+  
   <!-- Ionicons -->
   <link rel="stylesheet" href="admin_config/bower_components/Ionicons/css/ionicons.min.css">
 
-  <link rel="stylesheet" href="admin_config/bower_components/fullcalendar/dist/fullcalendar.min.css">
-  <link rel="stylesheet" href="admin_config/bower_components/fullcalendar/dist/fullcalendar.print.min.css" media="print">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" rel="stylesheet"/>
   <!-- Theme style -->
   <link rel="stylesheet" href="admin_config/dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="admin_config/dist/css/skins/_all-skins.min.css">
   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">  
-   <link href="admin_config1/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
+   <link href="admin_config/bower_components1/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
    <link rel="stylesheet" type="text/css" href="admin_config/dist/css/mystyle.css">
   
   @yield('style')
@@ -55,9 +55,9 @@
 
       <footer class="main-footer">
           <div class="pull-right hidden-xs">
-            <b>Quản lý sinh viên</b>Đại Học FPT 
+            <b>Quản lý sinh viên </b> Đại Học FPT 
           </div>
-          <strong>Copyright &copy; 10-2018 <a href="https://www.facebook.com/">Group PHP1807E</a>.</strong> FPT Aptech.
+          <strong>Copyright &copy; 10-2018 <a href="https://www.facebook.com/">Group PHP1807E</a>.</strong> FPT Aptech
         </footer>  
 </div>
 <!-- ./wrapper -->
@@ -75,11 +75,12 @@
 <script src="admin_config/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="admin_config/bower_components/moment/moment.js"></script>
-<script src="admin_config/bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
 <script src="admin_config/dist/js/demo.js"></script>
-<script src="admin_config1/bower_components/DataTables/media/js/jquery.dataTables.min.js"></script>
+<!-- datetime picker -->
+
+<script src="admin_config/bower_components1/DataTables/media/js/jquery.dataTables.min.js"></script>
 <script src="tim_asset/js/main.js"></script>
-    <script src="admin_config1/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
+    <script src="admin_config/bower_components1/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
     <script>
     $(document).ready(function() {
         $('#dataTables-example').DataTable({
@@ -98,7 +99,7 @@
       modal.find('.modal-body #cat_id').val(cat_id);
 })
   </script>
-    <script type="text/javascript" language="javascript" src="admin_config1/ckeditor/ckeditor.js" ></script>
-    @yield('script')
+
+    @yield('js')
 </body>
 </html>

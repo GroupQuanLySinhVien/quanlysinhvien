@@ -42,7 +42,7 @@
             <li ><a href="#"><i class="fa fa-circle-o"></i> Danh sách </a></li>
           </ul>
         </li>
-        <li <?php if($action1="Quản lý sinh viên") echo 'class="treeview active"';  ?>>
+        <li  <?php if ($action1=="Quản lý sinh viên") { echo 'class="treeview active"'; } ?>>
           <a href="liststudent">
             <i class="fa fa-users"></i>
             <span>Quản lý sinh viên</span>
@@ -51,7 +51,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li <?php if($action="Danh sách") echo 'class="treeview active"';  ?>><a href="liststudent"><i class="fa fa-circle-o"></i> Danh sách </a></li>
+            <li <?php if ($action=="Danh sách") { echo 'class="active"'; } ?>><a href="liststudent"><i class="fa fa-circle-o"></i> Danh sách </a></li>
           </ul>
         </li>
         <li  >
